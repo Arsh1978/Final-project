@@ -12,10 +12,20 @@ export const notecontroller = {
         }
     },
     updateNote(request,response){
+        response.json({message:'Question Updated'});
     },
     deleteNote(request,response){
+        response.json({message:'Question Removed'});
     },
-    getNote(request,response){
-        
+    async getNote(request,response){
+        try{
+            const docs = await NotesModel.find({}).exec();
+            response.json({message:'All Records ', records: docs});
+            }
+            catch(err){
+                console.log('Error in Questions ', err);
+                response.json({message:'Error in Questions '});
+            }
+
     }
 }
