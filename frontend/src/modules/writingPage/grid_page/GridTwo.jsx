@@ -33,6 +33,8 @@ export const GridTwo = () => {
     console.log('Note Object is ', noteObject);
     const response = await apiclient.post('http://localhost:1234/submitnote', noteObject);
     console.log('Response is ', response);
+
+    alert('Message Added . Stop!!!');
     
   }
 
