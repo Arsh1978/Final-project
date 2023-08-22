@@ -8,7 +8,7 @@
   /* Apply a general font and background color */
   body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: white;
+    background-color: #000;
      /* Remove default margin to fill the entire screen */
     display: fixed;
     justify-content: left;
