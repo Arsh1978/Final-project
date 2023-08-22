@@ -27,5 +27,11 @@ export const notecontroller = {
                 response.json({message:'Error in Questions '});
             }
 
+    },
+    async singleNote(request,response){
+        const noteid = request.params.noteid;
+        const doc = await NotesModel.findOne({_id:noteid}).exec();
+        console.log('Doc is',doc);
+        response.json({question:doc});
     }
 }

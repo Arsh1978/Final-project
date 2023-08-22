@@ -7,3 +7,4 @@ noteRoutes.post('/note',notecontroller.submitNote);
 noteRoutes.get('/note',notecontroller.getNote);
 noteRoutes.put('/note',notecontroller.updateNote);
 noteRoutes.delete('/note',notecontroller.deleteNote);
+noteRoutes.get('/singleNote/:noteid',notecontroller.singleNote);
