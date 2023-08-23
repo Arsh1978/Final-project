@@ -34,14 +34,14 @@ export const GridTwo = () => {
     const response = await apiclient.post('http://localhost:1234/submitnote', noteObject);
     console.log('Response is ', response);
 
-    alert('Message Added . Stop!!!');
+    alert('Message Added ');
     
   }
 
   return (
-    <Grid alignItems={'center'} justifyContent={'center'} item xs={9}>
+    <Grid alignItems={'center'} justifyContent={'center'} item xs={8}>
       <Container>
-        <div className="apple-notes-form">
+      <div className="apple-notes-form border border-dark border-1" style={{ minHeight: "100vh" }}>
           <TextField
             className="apple-notes-title"
             value={titl}

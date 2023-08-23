@@ -52,8 +52,8 @@ function Header() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <StyledAppBar position="static">
-        <Toolbar>
+      <StyledAppBar position="static" className='border border-dark border-1'>
+      <Toolbar className='p-1'>
           <Search_box onTitleSearch={handleTitleSearch} />
           <AddButton
             onCardAdded={handleCardAdded}

@@ -4,7 +4,7 @@ import CardContent from '@mui/material/CardContent';
 
 function AddCard({ title }) {
   return (
-    <Card>
+    <Card className=' mt-3 p-1 border border-dark border-2'>
       <CardContent>
         {title}
       </CardContent>

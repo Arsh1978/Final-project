@@ -1,94 +1,94 @@
 /* Reset some default styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Apply a general font and background color */
-  body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #000;
-     /* Remove default margin to fill the entire screen */
-    display: fixed;
-    justify-content: left;
-    align-items: top;
-    height: 100vh; /* Set the body to full viewport height */
-  }
-  
-  /* Style for the form container */
-  .apple-notes-form {
-    background-color:greenyellow;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 1000%; /* Adjust the width as needed */
-    max-width: 600px; /* Limit the maximum width for readability */
-  }
-  
-  /* Style for the title input */
-  .apple-notes-title {
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 18px;
-  }
-  
-  /* Style for the content textarea */
-  .apple-notes-content {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    resize: none;
-  }
-  
-  /* Style for the button container */
-  .apple-notes-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-  }
-  
-  /* Style for buttons */
-  .apple-notes-save-button,
-  .apple-notes-submit-button {
-    padding: 10px 20px;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  /* Apply styles to specific buttons */
-  .apple-notes-save-button {
-    background-color: transparent;
-    border: 1px solid #007aff;
-    color: #007aff;
-  }
-  
-  .apple-notes-submit-button {
-    background-color: #007aff;
-    border: none;
-    color: white;
-  }
-  
-  /* Change button colors on hover */
-  .apple-notes-save-button:hover {
-    background-color: #007aff;
-    color: white;
-  }
-  
-  .apple-notes-submit-button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Apply styles for focused input and textarea */
-  .apple-notes-title:focus,
-  .apple-notes-content:focus {
-    outline: none;
-    border-color: #007aff;
-    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply a general font and background color */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: white;
+   /* Remove default margin to fill the entire screen */
+  display: fixed;
+  justify-content: left;
+  align-items: top;
+  height: 100vh; /* Set the body to full viewport height */
+}
+
+/* Style for the form container */
+.apple-notes-form {
+  background-color:greenyellow;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Adjust the width as needed */
+  max-width: 100; /* Limit the maximum width for readability */
+}
+
+/* Style for the title input */
+.apple-notes-title {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+/* Style for the content textarea */
+.apple-notes-content {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  resize: none;
+}
+
+/* Style for the button container */
+.apple-notes-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+/* Style for buttons */
+.apple-notes-save-button,
+.apple-notes-submit-button {
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Apply styles to specific buttons */
+.apple-notes-save-button {
+  background-color: transparent;
+  border: 1px solid #007aff;
+  color: #007aff;
+}
+
+.apple-notes-submit-button {
+  background-color: #007aff;
+  border: none;
+  color: white;
+}
+
+/* Change button colors on hover */
+.apple-notes-save-button:hover {
+  background-color: #007aff;
+  color: white;
+}
+
+.apple-notes-submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Apply styles for focused input and textarea */
+.apple-notes-title:focus,
+.apple-notes-content:focus {
+  outline: none;
+  border-color: #007aff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
