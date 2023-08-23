@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import SearchIcon from '@mui/icons-material/Search';
-
+import { List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import apiclient from '../../../shared/services/api-client';
 
 
@@ -24,17 +24,27 @@ export const Search_box = ({ onSearch, onTitleSearch }) => {
   };
 
   return (
-    <div>
-      <TextField
-        id="search-box"
-        label="Search note"
-        variant="outlined"
-        value={searchQuery}
-        onChange={handleSearchChange}
-      />
-      <Button variant="contained" onClick={handleTitleSearch}>
-        <SearchIcon />
-      </Button>
-    </div>
+    <List dense>
+      <ListItem>
+        <ListItemIcon>
+          {/* Search Box */}
+          <TextField
+            id="search-box"
+            label="Search note"
+            variant="outlined"
+            className='m-2'
+            value={searchQuery}
+            onChange={handleSearchChange}
+          />
+        </ListItemIcon>
+        <br />
+        <ListItemText>
+          {/* Search Button */}
+          <Button className='m-2' variant="contained" onClick={handleTitleSearch}>
+            <SearchIcon />
+          </Button>
+        </ListItemText>
+      </ListItem>
+    </List>
   );
 };
