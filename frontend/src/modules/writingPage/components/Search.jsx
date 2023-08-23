@@ -3,6 +3,8 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import SearchIcon from '@mui/icons-material/Search';
 
+import apiclient from '../../../shared/services/api-client';
+
 
 export const Search_box = ({ onSearch, onTitleSearch }) => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -10,11 +12,15 @@ export const Search_box = ({ onSearch, onTitleSearch }) => {
   const handleSearchChange = (event) => {
     const newQuery = event.target.value;
     setSearchQuery(newQuery);
+    console.log(newQuery);
   };
 
 
-  const handleTitleSearch = () => {
-    onTitleSearch(searchQuery);
+  const handleTitleSearch = async () => {
+    // onTitleSearch(searchQuery);
+    const response= await apiclient.get("http://localhost:1234/note");
+    console.log(response);
+    onTitleSearch(response);
   };
 
   return (

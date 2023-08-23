@@ -9,6 +9,8 @@ import AddButton from '../../modules/writingPage/components/AddButton';
 import Grid from '@mui/material/Grid';
 import AddCard from '../../modules/writingPage/components/NotesList';
 
+import apiclient from '../services/api-client';
+
 const StyledAppBar = styled(AppBar)({
   backgroundColor: 'white',
 });
@@ -32,15 +34,20 @@ function Header() {
     setFilteredCards(newCards);
   };
 
-  const handleTitleSearch = (query) => {
-    const filtered = cards.filter((card) => {
-      const content = card.props.title;
-      if (content && typeof content === 'string') {
-        return content.toLowerCase().includes(query.toLowerCase());
-      }
-      return false;
-    });
-    setFilteredCards(filtered);
+  let storedTitles = [];
+  const handleTitleSearch = (data) => {
+
+    console.log(data);
+    const storedTitles = data.data.records.map(record => record.title)
+    // const filtered = cards.filter((card) => {
+    //   const content = card.props.title;
+    //   if (content && typeof content === 'string') {
+    //     return content.toLowerCase().includes(query.toLowerCase());
+    //   }
+    //   return false;
+    // });
+    console.log(storedTitles);
+    setFilteredCards(storedTitles);
   };
 
   return (
@@ -57,9 +64,9 @@ function Header() {
       </StyledAppBar>
       <div style={{ overflow: 'auto', maxHeight: 'calc(100vh - 64px)' }}>
         <Grid container spacing={2}>
-          {filteredCards.map((card, index) => (
+          {filteredCards.map((title, index) => (
             <Grid item xs={12} key={index}>
-              <AddCard title={`Title ${index + 1}`} onDelete={() => handleCardDeleted(index)} />
+              <AddCard title={title} onDelete={() => handleCardDeleted(index)} />
             </Grid>
           ))}
         </Grid>
